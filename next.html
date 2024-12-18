@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width,initial-scale=1.0">
+        <title>web Layout</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+              body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-image: url('Background.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "top-left top-right"
+                "button button"
+                "bottom-left bottom-right"
+                ". bottom-text";
+            gap: 20px;
+            text-align: center;
+            position: relative; 
+        }
+
+        .box {
+            width: 150px;
+            height: 200px;
+            border: 2px solid white;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box-top-left {
+            grid-area: top-left;
+        }
+
+        .box-bottom-right {
+            grid-area: bottom-right;
+        }
+
+        .text {
+            color: white;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .text-top-right {
+            grid-area: top-right;
+        }
+
+        .text-bottom-left {
+            grid-area: bottom-left;
+        }
+
+        .text-bottom {
+            grid-area: bottom-text;
+            position: absolute;
+            bottom: 50px; 
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 10px; 
+            font-size: 12px; 
+            line-height: 1.4; 
+        }
+
+        .button {
+            grid-area: button;
+            padding: 10px 20px;
+            font-size: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            margin: auto;
+        }
+        </style>
+    </head>
+    <body>
+        <audio autoplay>
+            <source src="c:\Users\arman\Downloads\MyGirl.mp3" type="audio/mpeg"
+        </audio>
+        <div class="container">
+            <div class="box box-top-left">
+                <img src="c:\Users\arman\Downloads\girl.jpg" alt="Image 1">
+            </div>
+            <div class="text text-top-right">
+                hai sayangkuu,  Hengga terasa yaaa. kita udah 1 tahun ngelajalanin hubuangan ini. 
+            </div>
+            <botton class="button">BALAS</botton>
+            <div class="text text-bottom-left">
+                Semoga setiap hari yang kalian lewati bersama dipenuhi dengan cinta, tawa, dan kenangan indah.
+                aku harap kita bisa menerjang ombak masalah yang ingin menghancurakan kapal kita.
+            </div>
+            <div class="box box-bottom-right">
+                <img src="c:\Users\arman\Downloads\girl2.jpg" alt="Image 2">
+            </div>
+            <div class="text-bottom">
+                Happy Anniversary ke-1 Tahun sayangkuu
+            </div>
+        </div>
+    </body>
+</html>
+    
